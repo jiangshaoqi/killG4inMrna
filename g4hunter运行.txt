@@ -1,0 +1,37 @@
+运行命令
+cmd = "python3 ./G4Hunter.py -i ./R1_G4_" + \
+                str(index) + ".txt -o ./res_R1_G4 -w 25 -s 1.4"
+
+
+蛋白质，rna对应地图
+protein_rna_mapping = {"M": ["AUG"],  # Met
+                       "T": ["ACA", "ACC", "ACG", "ACU"],  # Thr: AC4
+                       "N": ["AAC", "AAU"],  # Asn: AA2
+                       "K": ["AAA", "AAG"],  # Lys: AA2
+                       # Ser: AG2, UC4
+                       "S": ["AGC", "AGU", "UCA", "UCC", "UCG", "UCU"],
+                       # Arg: AG2, CG4
+                       "R": ["AGA", "AGG", "CGA", "CGC", "CGG", "CGU"],
+                       # Val: GU4
+                       "V": ["GUA", "GUC", "GUG", "GUU"],
+                       # Ala: GC4
+                       "A": ["GCA", "GCC", "GCG", "GCU"],
+                       "D": ["GAC", "GAU"],  # Asp: GA2
+                       "E": ["GAA", "GAG"],  # Glu: GA2
+                       # Gly: GG4
+                       "G": ["GGA", "GGC", "GGG", "GGU"],
+                       "F": ["UUC", "UUU"],  # Phe: UU2
+                       # Leu: UU2, CU4
+                       "L": ["UUA", "UUG", "CUA", "CUC", "CUG", "CUU"],
+                       "Y": ["UAC", "UAU"],  # Tyr: UA2
+                       "C": ["UGC", "UGU"],  # Cys: UG2
+                       "W": ["UGG"],  # Trp: UGG
+                       # Pro: CC4
+                       "P": ["CCA", "CCC", "CCG", "CCU"],
+                       "H": ["CAC", "CAU"],  # His: CA2
+                       "Q": ["CAA", "CAG"],  # Gln: CA2
+                       "I": ["AUA", "AUC", "AUU"],  # Ile: AU3
+                       # Sec: UA2, UGA
+                       "*": ["UAA", "UAG", "UGA"]
+                       }
+
